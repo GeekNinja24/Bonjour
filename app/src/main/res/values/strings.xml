@@ -2,5 +2,4 @@
     <string name="app_name">Bonjour</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="default_web_client_id" translatable="false">51182340745-b9h0ujjbhi76db9f1fa2bhtbincdj7sd.apps.googleusercontent.com</string>
 </resources>
