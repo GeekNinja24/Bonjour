@@ -67,33 +67,40 @@ public class ChatDetailActivity extends AppCompatActivity {
         final String senderRoom = senderId + receiveId;
         final String receiverRoom = receiveId+senderId;
 
+        database.getReference().child("Chats")
+                .child(senderRoom)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        messageModels.clear();
+                        for(DataSnapshot snapshot1: snapshot.getChildren()){
+                            MessageModel model = snapshot1.getValue(MessageModel.class);
+                            model.setMessageId(snapshot1.getKey());
+                            messageModels.add(model);
+                        }
+                        chatAdapter.notifyDataSetChanged();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
+
+
+
         binding.send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String message = binding.enterMessage.getText().toString();
                 final MessageModel model = new MessageModel(senderId,message);
                 model.setTimestamp(new Date().getTime());
+
                 binding.enterMessage.setText("");
 
-                database.getReference().child("Chats")
-                                .child(senderRoom)
-                                        .addValueEventListener(new ValueEventListener() {
-                                            @Override
-                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            messageModels.clear();
-                                            for(DataSnapshot snapshot1: snapshot.getChildren()){
-                                                MessageModel model = snapshot1.getValue(MessageModel.class);
-                                                model.setMessageId(snapshot1.getKey());
-                                                messageModels.add(model);
-                                            }
-                                            chatAdapter.notifyDataSetChanged();
-                                            }
 
-                                            @Override
-                                            public void onCancelled(@NonNull DatabaseError error) {
-
-                                            }
-                                        });
 
 
                 database.getReference().child("Chats")
