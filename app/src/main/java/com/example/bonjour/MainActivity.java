@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.setting:
-                Toast.makeText(this, "Setting Clicked", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent(MainActivity.this,SettingsActivity.class);
+                startActivity(intent2);
                 break;
 
             case R.id.groupChat:
