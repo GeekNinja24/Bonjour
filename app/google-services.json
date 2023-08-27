@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "237504509369",
+    "firebase_url": "https://bonjour-v2-default-rtdb.firebaseio.com",
+    "project_id": "bonjour-v2",
+    "storage_bucket": "bonjour-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237504509369:android:a07ce14069ab7aba35b268",
+        "android_client_info": {
+          "package_name": "com.GeekNinja24.Bonjour_v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237504509369-4hq05etfk4cqhs05c25re38941fg324v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.GeekNinja24.Bonjour_v2",
+            "certificate_hash": "4c2b9f285e6ee0de598c96c77fc5a4b91958edee"
+          }
+        },
+        {
+          "client_id": "237504509369-9lsd3v8ekpea7v10bddhvkcgt9h7tnq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC0Sx15XZvMBguLTYLTcvUdOyDX0KqSC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237504509369-9lsd3v8ekpea7v10bddhvkcgt9h7tnq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
